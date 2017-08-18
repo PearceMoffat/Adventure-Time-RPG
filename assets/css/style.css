@@ -1,0 +1,79 @@
+html, body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	background-image: url("../images/background_nuetral.png");
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+h1, h2 {
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	border: 1px black solid;
+}
+
+img {
+	height: 120px;
+	width: 120px;
+	display: block;
+	margin: auto;
+	border: 1px black solid;
+}
+
+.col-md-6 {
+	text-align: center;
+	min-height: 128px;
+}
+
+.hidden {
+	display: none;
+}
+
+.showing {
+	display: block;
+}
+
+.showing-inline {
+	display: inline;
+}
+
+#attackBox {
+	width: 160px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 auto;
+	background: rgba(0, 128, 0, 0.75);
+	border: 1px black solid;
+}
+
+#characters {
+	min-height: 162px;
+}
+
+#combat-text {
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	width: 350px;
+	margin: auto;
+	border: 1px black solid;
+}
+
+#defendBox {
+	width: 160px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 auto;
+	background: rgba(255, 0, 0, 0.75);
+	border: 1px black solid;
+}
+
+#finnBox, #iceBox, #gumBox, #flameBox {
+	width: 160px;
+	text-align: center;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.75);
+	border: 1px black solid;
+}

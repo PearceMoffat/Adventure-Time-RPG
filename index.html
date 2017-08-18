@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<title>Adventure Time Game</title>
+</head>
+<body>
+	<header class="text-center">
+		<h1>Adventure Time Game</h1>
+	</header>
+	<div class="container">
+		<div id="characters">
+			<div class="col-md-3 col-xs-3">
+				<div id="finnBox"></div>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<div id="gumBox"></div>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<div id="iceBox"></div>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<div id="flameBox"></div>
+			</div>
+		</div>
+		<h2 id="game-text" class="text-center"></h2>
+		<div class="combat-area">
+			<div class="col-md-3">
+				<div id="attackBox"></div>
+			</div>
+			<div class="col-md-6">
+				<br><br>
+				<button id="fight"></button>
+				<br><br>
+				<div id="combat-text"></div>
+				<br><br>
+			</div>
+			<div class="col-md-3">
+				<div id="defendBox"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
