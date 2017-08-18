@@ -42,7 +42,7 @@ var wins = 0;
 
 function initializeGame() {
 	console.log("Game initialized");
-	$('body').css("background-image", "url(assets/images/background_nuetral.png)");
+	$('html').css("background-image", "url(assets/images/background_nuetral.png)");
 	$("#attackBox").attr("class", "hidden");
 	$("#defendBox").attr("class", "hidden");
 	$("#combat-text").attr("class", "hidden");
@@ -77,7 +77,7 @@ $("#finnBox").on("click", function() {
     if (gameStage === 1) {
     	$("#attackBox").attr("class", "showing");
         $("#attackBox").html(finn.name + "<img src='" + finn.imgsrc + "'>" + finn.health);
-        $('body').css("background-image", "url(assets/images/background_finn.jpg)");
+        $('html').css("background-image", "url(assets/images/background_finn.jpg)");
         $("#game-text").html("Choose Your Opponent");
         $("#finnBox").attr("class", "hidden");
         activeCharacter = finn;
@@ -99,7 +99,7 @@ $("#gumBox").on("click", function() {
     	$("#attackBox").attr("class", "showing");
         $("#attackBox").html(bubblegum.name + "<img src='" + bubblegum.imgsrc + "'>" + 
         	bubblegum.health);
-        $('body').css("background-image", "url(assets/images/background_bubblegum.jpg)");
+        $('html').css("background-image", "url(assets/images/background_bubblegum.jpg)");
         $("#game-text").html("Choose Your Opponent");
         $("#gumBox").attr("class", "hidden");
         activeCharacter = bubblegum;
@@ -122,7 +122,7 @@ $("#iceBox").on("click", function() {
     	$("#attackBox").attr("class", "showing");
         $("#attackBox").html(iceKing.name + "<img src='" + iceKing.imgsrc + "'>" + 
         	iceKing.health);
-        $('body').css("background-image", "url(assets/images/background_iceking.png)");
+        $('html').css("background-image", "url(assets/images/background_iceking.png)");
         $("#game-text").html("Choose Your Opponent");
         $("#iceBox").attr("class", "hidden");
         activeCharacter = iceKing;
@@ -145,7 +145,7 @@ $("#flameBox").on("click", function() {
     	$("#attackBox").attr("class", "showing");
         $("#attackBox").html(flamePrincess.name + "<img src='" + flamePrincess.imgsrc + 
         	"'>" + flamePrincess.health);
-        $('body').css("background-image", "url(assets/images/background_flameprincess.jpg)");
+        $('html').css("background-image", "url(assets/images/background_flameprincess.jpg)");
         $("#game-text").html("Choose Your Opponent");
         $("#flameBox").attr("class", "hidden");
         activeCharacter = flamePrincess;
