@@ -26,18 +26,6 @@ img {
 	min-height: 128px;
 }
 
-.hidden {
-	display: none;
-}
-
-.showing {
-	display: block;
-}
-
-.showing-inline {
-	display: inline;
-}
-
 #attackBox {
 	width: 160px;
 	font-weight: bold;

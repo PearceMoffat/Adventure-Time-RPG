@@ -43,14 +43,14 @@ var wins = 0;
 function initializeGame() {
 	console.log("Game initialized");
 	$('html').css("background-image", "url(assets/images/background_nuetral.png)");
-	$("#attackBox").attr("class", "hidden");
-	$("#defendBox").attr("class", "hidden");
-	$("#combat-text").attr("class", "hidden");
-	$("#finnBox").attr("class", "showing");
-	$("#gumBox").attr("class", "showing");
-	$("#iceBox").attr("class", "showing");
-	$("#flameBox").attr("class", "showing");
-	$("#fight").attr("class", "hidden");
+	$("#attackBox").hide();
+	$("#defendBox").hide();
+	$("#combat-text").hide();
+	$("#finnBox").show();
+	$("#gumBox").show();
+	$("#iceBox").show();
+	$("#flameBox").show();
+	$("#fight").hide();
 	gameStage = 1;
 	wins = 0;
 	finn.attack = finn.baseattack;
@@ -75,20 +75,20 @@ initializeGame();
 
 $("#finnBox").on("click", function() {
     if (gameStage === 1) {
-    	$("#attackBox").attr("class", "showing");
+    	$("#attackBox").show();
         $("#attackBox").html(finn.name + "<img src='" + finn.imgsrc + "'>" + finn.health);
         $('html').css("background-image", "url(assets/images/background_finn.jpg)");
         $("#game-text").html("Choose Your Opponent");
-        $("#finnBox").attr("class", "hidden");
+        $("#finnBox").hide();
         activeCharacter = finn;
         gameStage++;
     } else if (gameStage === 2) {
-    	$("#defendBox").attr("class", "showing");
+    	$("#defendBox").show();
         $("#defendBox").html(finn.name + "<img src='" + finn.imgsrc + "'>" + finn.health);
         $("#game-text").html("Fight!");
-        $("#finnBox").attr("class", "hidden");
-        $("#fight").attr("class", "showing-inline");
-        $("#combat-text").attr("class", "hidden");
+        $("#finnBox").hide();
+        $("#fight").show();
+        $("#combat-text").hide();
         defendingCharacter = finn;
         gameStage++;
     }
@@ -96,22 +96,22 @@ $("#finnBox").on("click", function() {
 
 $("#gumBox").on("click", function() {
     if (gameStage === 1) {
-    	$("#attackBox").attr("class", "showing");
+    	$("#attackBox").show();
         $("#attackBox").html(bubblegum.name + "<img src='" + bubblegum.imgsrc + "'>" + 
         	bubblegum.health);
         $('html').css("background-image", "url(assets/images/background_bubblegum.jpg)");
         $("#game-text").html("Choose Your Opponent");
-        $("#gumBox").attr("class", "hidden");
+        $("#gumBox").hide();
         activeCharacter = bubblegum;
         gameStage++;
     } else if (gameStage === 2) {
-    	$("#defendBox").attr("class", "showing");
+    	$("#defendBox").show();
         $("#defendBox").html(bubblegum.name + "<img src='" + bubblegum.imgsrc + "'>" + 
         	bubblegum.health);
         $("#game-text").html("Fight!");
-        $("#gumBox").attr("class", "hidden");
-        $("#fight").attr("class", "showing-inline");
-        $("#combat-text").attr("class", "hidden");
+        $("#gumBox").hide();
+        $("#fight").show();
+        $("#combat-text").hide();
         defendingCharacter = bubblegum;
         gameStage++;
     }
@@ -119,22 +119,22 @@ $("#gumBox").on("click", function() {
 
 $("#iceBox").on("click", function() {
     if (gameStage === 1) {
-    	$("#attackBox").attr("class", "showing");
+    	$("#attackBox").show();
         $("#attackBox").html(iceKing.name + "<img src='" + iceKing.imgsrc + "'>" + 
         	iceKing.health);
         $('html').css("background-image", "url(assets/images/background_iceking.png)");
         $("#game-text").html("Choose Your Opponent");
-        $("#iceBox").attr("class", "hidden");
+        $("#iceBox").hide();
         activeCharacter = iceKing;
         gameStage++;
     } else if (gameStage === 2) {
-    	$("#defendBox").attr("class", "showing");
+    	$("#defendBox").show();
         $("#defendBox").html(iceKing.name + "<img src='" + iceKing.imgsrc + "'>" + 
         	iceKing.health);
         $("#game-text").html("Fight!");
-        $("#iceBox").attr("class", "hidden");
-        $("#fight").attr("class", "showing-inline");
-        $("#combat-text").attr("class", "hidden");
+        $("#iceBox").hide();
+        $("#fight").show();
+        $("#combat-text").hide();
         defendingCharacter = iceKing;
         gameStage++;
     }
@@ -142,22 +142,22 @@ $("#iceBox").on("click", function() {
 
 $("#flameBox").on("click", function() {
     if (gameStage === 1) {
-    	$("#attackBox").attr("class", "showing");
+    	$("#attackBox").show();
         $("#attackBox").html(flamePrincess.name + "<img src='" + flamePrincess.imgsrc + 
         	"'>" + flamePrincess.health);
         $('html').css("background-image", "url(assets/images/background_flameprincess.jpg)");
         $("#game-text").html("Choose Your Opponent");
-        $("#flameBox").attr("class", "hidden");
+        $("#flameBox").hide();
         activeCharacter = flamePrincess;
         gameStage++;
     } else if (gameStage === 2) {
-    	$("#defendBox").attr("class", "showing");
+    	$("#defendBox").show();
         $("#defendBox").html(flamePrincess.name + "<img src='" + flamePrincess.imgsrc +
         	"'>" + flamePrincess.health);
         $("#game-text").html("Fight!");
-        $("#flameBox").attr("class", "hidden");
-        $("#fight").attr("class", "showing-inline");
-        $("#combat-text").attr("class", "hidden");
+        $("#flameBox").hide();
+        $("#fight").show();
+        $("#combat-text").hide();
         defendingCharacter = flamePrincess;
         gameStage++;
     }
@@ -169,7 +169,7 @@ $("#fight").on("click", function() {
 		initializeGame();
 	}
     else if (gameStage === 3) {
-    	$("#combat-text").attr("class", "showing");
+    	$("#combat-text").show();
 	    
 	    defendingCharacter.health -= activeCharacter.attack;
 
@@ -184,7 +184,7 @@ $("#fight").on("click", function() {
 	        	defendingCharacter.imgsrc + "'>" + defendingCharacter.health);
 	        //Player is out of health
 	        if (activeCharacter.health <= 0) {
-	    		$("#attackBox").attr("class", "hidden");
+	    		$("#attackBox").hide();
     			$("#combat-text").html("You have been defeated!<br>Press the Reset" +
     			" button to play again");
     			$("#fight").html("Reset");
@@ -198,16 +198,16 @@ $("#fight").on("click", function() {
 	    	if (wins === 2) {
 	    		$("#game-text").html("Winner winner chicken dinner!");
 	    		$("#fight").html("Reset");
-	    		$("#defendBox").attr("class", "hidden");
+	    		$("#defendBox").hide();
 	    		$("#combat-text").html("You attacked " + defendingCharacter.name + " for " + 
 		        	activeCharacter.attack + " damage.<br>And they were defeated! You" +
 		        	" win! Click Reset button to play again");
 	    		wins++;
 	    	}
 	    	else {
-	    		$("#fight").attr("class", "hidden");
+	    		$("#fight").hide();
 	    		$("#game-text").html("Choose Your Opponent");
-		    	$("#defendBox").attr("class", "hidden");
+		    	$("#defendBox").hide();
 		    	$("#combat-text").html("You attacked " + defendingCharacter.name + " for " + 
 		        	activeCharacter.attack + " damage.<br>And they were defeated! Choose" +
 		        	" your next foe!");
